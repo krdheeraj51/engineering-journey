@@ -1,4 +1,18 @@
 {
-  "generatedAt": "initial",
-  "entries": []
+  "generatedAt": "2026-09-20T03:11:26.638Z",
+  "totalEntries": 1,
+  "entries": [
+    {
+      "date": "2026-09-20",
+      "title": "Building My Engineering Journey",
+      "topics": [
+        "Engineering",
+        "GitHub",
+        "Documentation"
+      ],
+      "category": "Engineering",
+      "status": "completed",
+      "path": "learning/2026/09/20.md"
+    }
+  ]
 }
