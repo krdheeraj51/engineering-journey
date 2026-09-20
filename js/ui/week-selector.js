@@ -1,13 +1,3 @@
-// window.WeekSelector = (() => {
-//   function init({ onPrevious, onNext, onToday }) {
-//     document.getElementById("prev-week").addEventListener("click", onPrevious);
-//     document.getElementById("next-week").addEventListener("click", onNext);
-//     document.getElementById("today").addEventListener("click", onToday);
-//   }
-
-//   return { init };
-// })();
-
 window.WeekSelector = (() => {
 
   function init({
@@ -34,24 +24,63 @@ window.WeekSelector = (() => {
   function render({
     startDate,
     endDate,
-    availableCount
+    availableCount,
+    previousAvailable,
+    nextAvailable
   }) {
 
     const range =
-      document.getElementById("week-range");
+      document.getElementById(
+        "week-range"
+      );
 
     const count =
-      document.getElementById("week-entry-count");
+      document.getElementById(
+        "week-entry-count"
+      );
+
+    const previousButton =
+      document.getElementById(
+        "prev-week"
+      );
+
+    const nextButton =
+      document.getElementById(
+        "next-week"
+      );
 
 
+    /*
+     * Week range
+     */
     range.textContent =
       `${formatDate(startDate)} to ${formatDate(endDate)}`;
 
 
+    /*
+     * Number of learning dates
+     */
     count.textContent =
       `${availableCount} learning date${
-        availableCount === 1 ? "" : "s"
+        availableCount === 1
+          ? ""
+          : "s"
       } available`;
+
+
+    /*
+     * Previous week
+     */
+    previousButton.disabled =
+      !previousAvailable;
+
+
+    /*
+     * Next week
+     */
+    nextButton.disabled =
+      !nextAvailable;
+
   }
 
 
@@ -59,11 +88,14 @@ window.WeekSelector = (() => {
 
     return DateUtils
       .parseDate(value)
-      .toLocaleDateString(undefined, {
-        day: "numeric",
-        month: "short",
-        year: "numeric"
-      });
+      .toLocaleDateString(
+        undefined,
+        {
+          day: "numeric",
+          month: "short",
+          year: "numeric"
+        }
+      );
 
   }
 

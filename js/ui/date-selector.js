@@ -1,19 +1,3 @@
-// window.DateSelector = (() => {
-//   function init(onChange) {
-//     const picker = document.getElementById("date-picker");
-
-//     picker.addEventListener("change", event => {
-//       if (event.target.value) onChange(event.target.value);
-//     });
-//   }
-
-//   function set(value) {
-//     document.getElementById("date-picker").value = value;
-//   }
-
-//   return { init, set };
-// })();
-
 window.DateSelector = (() => {
 
   function init(onChange) {
@@ -36,6 +20,10 @@ window.DateSelector = (() => {
     const picker =
       document.getElementById("date-picker");
 
+
+    /*
+     * No learning entries in this week.
+     */
     if (!entries.length) {
 
       picker.innerHTML = `
@@ -44,10 +32,19 @@ window.DateSelector = (() => {
         </option>
       `;
 
+      picker.disabled = true;
+
       return;
     }
 
 
+    picker.disabled = false;
+
+
+    /*
+     * Create one option for every
+     * learning entry in the current week.
+     */
     picker.innerHTML = entries
       .map(entry => {
 
@@ -64,9 +61,13 @@ window.DateSelector = (() => {
         return `
           <option
             value="${entry.date}"
-            ${entry.date === selectedDate ? "selected" : ""}
+            ${entry.date === selectedDate
+              ? "selected"
+              : ""}
           >
-            ${formattedDate} — ${escapeHtml(entry.title)}
+            ${formattedDate} — ${escapeHtml(
+              entry.title
+            )}
           </option>
         `;
 
@@ -74,7 +75,12 @@ window.DateSelector = (() => {
       .join("");
 
 
-    picker.value = selectedDate;
+    /*
+     * Explicitly select the current date.
+     */
+    if (selectedDate) {
+      picker.value = selectedDate;
+    }
   }
 
 
@@ -83,8 +89,9 @@ window.DateSelector = (() => {
     const picker =
       document.getElementById("date-picker");
 
-    picker.value = value;
-
+    if (value) {
+      picker.value = value;
+    }
   }
 
 
