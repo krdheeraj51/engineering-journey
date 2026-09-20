@@ -19,6 +19,19 @@
   .hero-stat {
     width: 100%;
   }
+
+  .week-navigation {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .week-summary {
+    order: -1;
+  }
+
+  .week-nav-button {
+    width: 100%;
+  }
 }
 
 @media (max-width: 640px) {
@@ -39,13 +52,16 @@
     padding-top: 28px;
   }
 
-  .toolbar-row {
-    flex-wrap: wrap;
+  .week-selector {
+    padding: 22px 18px 24px;
   }
 
-  .date-field {
-    order: -1;
-    width: 100%;
+  .week-summary h2 {
+    font-size: 1.15rem;
+  }
+
+  .week-date-selector {
+    margin-top: 22px;
   }
 
   .learning-content {
@@ -60,43 +76,4 @@
   .site-footer .container {
     flex-direction: column;
   }
-}
-
-/*
-add for mobile 
-*/
-@media (max-width: 900px) {
-
-  .week-navigation {
-    grid-template-columns: 1fr;
-    gap: 12px;
-  }
-
-  .week-summary {
-    order: -1;
-  }
-
-  .week-nav-button {
-    width: 100%;
-  }
-
-}
-
-/*
-add for mobile 
-*/
-@media (max-width: 640px) {
-
-  .week-selector {
-    padding: 22px 18px 24px;
-  }
-
-  .week-summary h2 {
-    font-size: 1.15rem;
-  }
-
-  .week-date-selector {
-    margin-top: 22px;
-  }
-
 }

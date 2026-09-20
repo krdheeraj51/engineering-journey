@@ -1,25 +1,19 @@
 window.WeekSelector = (() => {
+  function init({ onPrevious, onNext }) {
+    const previousButton = document.getElementById("prev-week");
+    const nextButton = document.getElementById("next-week");
 
-  function init({
-    onPrevious,
-    onNext
-  }) {
+    if (!previousButton) {
+      throw new Error('Week selector element "#prev-week" was not found.');
+    }
 
-    document
-      .getElementById("prev-week")
-      .addEventListener(
-        "click",
-        onPrevious
-      );
+    if (!nextButton) {
+      throw new Error('Week selector element "#next-week" was not found.');
+    }
 
-    document
-      .getElementById("next-week")
-      .addEventListener(
-        "click",
-        onNext
-      );
+    previousButton.addEventListener("click", onPrevious);
+    nextButton.addEventListener("click", onNext);
   }
-
 
   function render({
     startDate,
@@ -28,81 +22,32 @@ window.WeekSelector = (() => {
     previousAvailable,
     nextAvailable
   }) {
+    const range = document.getElementById("week-range");
+    const count = document.getElementById("week-entry-count");
+    const previousButton = document.getElementById("prev-week");
+    const nextButton = document.getElementById("next-week");
 
-    const range =
-      document.getElementById(
-        "week-range"
-      );
-
-    const count =
-      document.getElementById(
-        "week-entry-count"
-      );
-
-    const previousButton =
-      document.getElementById(
-        "prev-week"
-      );
-
-    const nextButton =
-      document.getElementById(
-        "next-week"
-      );
-
-
-    /*
-     * Week range
-     */
     range.textContent =
       `${formatDate(startDate)} to ${formatDate(endDate)}`;
 
-
-    /*
-     * Number of learning dates
-     */
     count.textContent =
-      `${availableCount} learning date${
-        availableCount === 1
-          ? ""
-          : "s"
-      } available`;
+      `${availableCount} learning date${availableCount === 1 ? "" : "s"} available`;
 
+    previousButton.disabled = !previousAvailable;
+    nextButton.disabled = !nextAvailable;
 
-    /*
-     * Previous week
-     */
-    previousButton.disabled =
-      !previousAvailable;
-
-
-    /*
-     * Next week
-     */
-    nextButton.disabled =
-      !nextAvailable;
-
+    // Accessibility
+    previousButton.setAttribute("aria-disabled", String(!previousAvailable));
+    nextButton.setAttribute("aria-disabled", String(!nextAvailable));
   }
-
 
   function formatDate(value) {
-
-    return DateUtils
-      .parseDate(value)
-      .toLocaleDateString(
-        undefined,
-        {
-          day: "numeric",
-          month: "short",
-          year: "numeric"
-        }
-      );
-
+    return DateUtils.parseDate(value).toLocaleDateString(undefined, {
+      day: "numeric",
+      month: "short",
+      year: "numeric"
+    });
   }
 
-
-  return {
-    init,
-    render
-  };
-
+  return { init, render };
 })();
