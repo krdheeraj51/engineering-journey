@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -10,6 +11,7 @@
   <link rel="stylesheet" href="css/components.css" />
   <link rel="stylesheet" href="css/responsive.css" />
 </head>
+
 <body>
   <header class="site-header">
     <div class="container header-inner">
@@ -45,7 +47,7 @@
       </div>
     </section>
 
-    <section class="toolbar card" aria-label="Learning navigation">
+    <!-- <section class="toolbar card" aria-label="Learning navigation">
       <div class="toolbar-row">
         <button id="prev-day" class="button secondary" type="button">← Previous</button>
         <label class="date-field">
@@ -60,6 +62,44 @@
         <button id="today" class="button primary" type="button">Today</button>
         <button id="next-week" class="button ghost" type="button">Next Week →</button>
       </div>
+    </section> -->
+    <section class="week-selector card" aria-label="Learning week navigation">
+
+      <p class="eyebrow">LEARNING WEEK</p>
+
+      <div class="week-navigation">
+
+        <button id="prev-week" class="week-nav-button" type="button">
+          ← Previous Week
+        </button>
+
+        <div class="week-summary">
+          <h2 id="week-range">
+            20 Sep 2026 to 26 Sep 2026
+          </h2>
+
+          <p id="week-entry-count">
+            1 learning date available
+          </p>
+        </div>
+
+        <button id="next-week" class="week-nav-button" type="button">
+          Next Week →
+        </button>
+
+      </div>
+
+      <div class="week-date-selector">
+
+        <label for="date-picker">
+          Select Learning Date
+        </label>
+
+        <select id="date-picker" aria-label="Select learning date">
+        </select>
+
+      </div>
+
     </section>
 
     <section class="content-grid">
@@ -134,4 +174,5 @@
   <script src="js/ui/learning-meta.js"></script>
   <script src="js/app.js"></script>
 </body>
+
 </html>

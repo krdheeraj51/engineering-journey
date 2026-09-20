@@ -1,4 +1,4 @@
-.toolbar {
+/* .toolbar {
   padding: 14px;
   margin-bottom: 24px;
 }
@@ -8,9 +8,9 @@
   align-items: center;
   justify-content: center;
   gap: 10px;
-}
+} */
 
-.toolbar-row + .toolbar-row {
+/* .toolbar-row + .toolbar-row {
   margin-top: 10px;
 }
 
@@ -28,6 +28,135 @@
   font-size: 0.72rem;
   margin-bottom: 3px;
   text-align: center;
+} */
+
+/* =========================================
+   WEEK SELECTOR
+   ========================================= */
+
+.week-selector {
+  padding: 30px 28px 34px;
+  margin-bottom: 30px;
+}
+
+.week-selector>.eyebrow {
+  margin-bottom: 18px;
+}
+
+/* Week navigation */
+
+.week-navigation {
+  display: grid;
+  grid-template-columns:
+    minmax(220px, 1fr) minmax(300px, 1.25fr) minmax(220px, 1fr);
+
+  align-items: center;
+  gap: 28px;
+}
+
+/* Previous / Next week buttons */
+
+.week-nav-button {
+  min-height: 62px;
+
+  border: 1px solid #9fb4cb;
+  border-radius: 10px;
+
+  background: #5b8dbd;
+  color: white;
+
+  font-size: 1rem;
+  font-weight: 800;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.15s ease,
+    filter 0.15s ease;
+}
+
+.week-nav-button:hover {
+  transform: translateY(-1px);
+  filter: brightness(0.96);
+}
+
+.week-nav-button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+/* Center week information */
+
+.week-summary {
+  text-align: center;
+}
+
+.week-summary h2 {
+  margin: 0;
+
+  font-size: clamp(1.25rem, 2vw, 1.55rem);
+
+  line-height: 1.25;
+
+  letter-spacing: -0.02em;
+}
+
+.week-summary p {
+  margin: 8px 0 0;
+
+  color: var(--muted);
+
+  font-size: 0.9rem;
+}
+
+/* Date dropdown */
+
+.week-date-selector {
+  max-width: 650px;
+
+  margin: 28px auto 0;
+}
+
+.week-date-selector label {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: #58677d;
+
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.week-date-selector select {
+  width: 100%;
+
+  min-height: 54px;
+
+  padding: 0 15px;
+
+  border: 1px solid #b8c5d6;
+  border-radius: 10px;
+
+  background: var(--surface);
+  color: var(--text);
+
+  font-size: 1rem;
+
+  outline: none;
+
+  cursor: pointer;
+}
+
+.week-date-selector select:hover {
+  border-color: #8da2ba;
+}
+
+.week-date-selector select:focus {
+  border-color: var(--primary);
+
+  box-shadow:
+    0 0 0 3px var(--primary-soft);
 }
 
 .content-grid {
@@ -147,7 +276,7 @@
   font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
 }
 
-.markdown-body :not(pre) > code {
+.markdown-body :not(pre)>code {
   background: var(--surface-soft);
   border: 1px solid var(--border);
   border-radius: 5px;
