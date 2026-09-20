@@ -77,3 +77,52 @@
     flex-direction: column;
   }
 }
+
+@media (max-width: 900px) {
+
+  .footer-inner {
+    grid-template-columns: 1fr 1fr;
+
+    gap: 35px;
+
+    padding: 32px 24px;
+  }
+
+  .footer-meta {
+    grid-column: 1 / -1;
+
+    text-align: left;
+
+    padding-top: 5px;
+  }
+
+}
+
+
+@media (max-width: 640px) {
+
+  .footer-inner {
+    grid-template-columns: 1fr;
+
+    gap: 28px;
+
+    padding: 30px 20px;
+  }
+
+
+  .footer-links {
+    flex-direction: column;
+
+    gap: 25px;
+  }
+
+
+  .footer-meta {
+    grid-column: auto;
+
+    text-align: left;
+
+    white-space: normal;
+  }
+
+}

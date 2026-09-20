@@ -177,3 +177,143 @@ input {
   justify-content: space-between;
   gap: 20px;
 }
+
+/* =========================================
+   SITE FOOTER
+   ========================================= */
+
+.site-footer {
+  margin-top: 70px;
+
+  border-top: 1px solid var(--border);
+
+  background: #ffffff;
+}
+
+
+.footer-inner {
+  max-width: 1440px;
+
+  margin: 0 auto;
+
+  padding: 38px 42px 30px;
+
+  display: grid;
+
+  grid-template-columns:
+    1.4fr 1fr auto;
+
+  gap: 50px;
+
+  align-items: start;
+}
+
+
+/* -----------------------------------------
+   Brand
+   ----------------------------------------- */
+
+.footer-brand {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 5px;
+}
+
+
+.footer-title {
+  font-size: 1.05rem;
+
+  font-weight: 800;
+
+  color: var(--text);
+}
+
+
+.footer-tagline {
+  color: var(--muted);
+
+  font-size: 0.9rem;
+}
+
+
+.footer-copyright {
+  margin-top: 18px;
+
+  color: var(--muted);
+
+  font-size: 0.82rem;
+}
+
+
+/* -----------------------------------------
+   Footer links
+   ----------------------------------------- */
+
+.footer-links {
+  display: flex;
+
+  gap: 70px;
+}
+
+
+.footer-link-group {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 9px;
+}
+
+
+.footer-heading {
+  margin-bottom: 5px;
+
+  color: var(--text);
+
+  font-size: 0.82rem;
+
+  font-weight: 800;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.08em;
+}
+
+
+.footer-link-group a {
+  color: var(--muted);
+
+  text-decoration: none;
+
+  font-size: 0.9rem;
+
+  transition:
+    color 0.15s ease,
+    transform 0.15s ease;
+}
+
+
+.footer-link-group a:hover {
+  color: var(--primary);
+
+  transform: translateX(2px);
+}
+
+
+/* -----------------------------------------
+   Footer meta
+   ----------------------------------------- */
+
+.footer-meta {
+  align-self: end;
+
+  color: var(--muted);
+
+  font-size: 0.82rem;
+
+  text-align: right;
+
+  white-space: nowrap;
+}
