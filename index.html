@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Engineering Journey — Learn • Build • Reflect • Evolve" />
+  <title>Engineering Journey</title>
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/learning.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="./">
+        <span class="brand-mark">EJ</span>
+        <span>
+          <strong>Engineering Journey</strong>
+          <small>Learn • Build • Reflect • Evolve</small>
+        </span>
+      </a>
+
+      <nav class="top-nav" aria-label="Primary navigation">
+        <a class="active" href="./">Daily Learning</a>
+        <a href="#topics">Topics</a>
+        <a href="#about">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container page">
+    <section class="hero">
+      <div>
+        <p class="eyebrow">MY ENGINEERING KNOWLEDGE BASE</p>
+        <h1>Engineering Journey</h1>
+        <p class="hero-copy">
+          A growing record of what I learn, build, experiment with, and revisit across
+          AI, backend, databases, cloud, DevOps, system design, and software engineering.
+        </p>
+      </div>
+      <div class="hero-stat">
+        <span id="learning-count">—</span>
+        <small>learning entries</small>
+      </div>
+    </section>
+
+    <section class="toolbar card" aria-label="Learning navigation">
+      <div class="toolbar-row">
+        <button id="prev-day" class="button secondary" type="button">← Previous</button>
+        <label class="date-field">
+          <span>Date</span>
+          <input id="date-picker" type="date" />
+        </label>
+        <button id="next-day" class="button secondary" type="button">Next →</button>
+      </div>
+
+      <div class="toolbar-row compact">
+        <button id="prev-week" class="button ghost" type="button">← Previous Week</button>
+        <button id="today" class="button primary" type="button">Today</button>
+        <button id="next-week" class="button ghost" type="button">Next Week →</button>
+      </div>
+    </section>
+
+    <section class="content-grid">
+      <aside class="sidebar">
+        <div class="card">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">TIMELINE</p>
+              <h2>Learning Days</h2>
+            </div>
+            <span id="current-month" class="muted"></span>
+          </div>
+
+          <div class="search-box">
+            <input id="search-input" type="search" placeholder="Search learning..." />
+          </div>
+
+          <div id="entry-list" class="entry-list">
+            <p class="muted">Loading...</p>
+          </div>
+        </div>
+
+        <div id="topics" class="card">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">EXPLORE</p>
+              <h2>Topics</h2>
+            </div>
+          </div>
+          <div id="topic-list" class="topic-list"></div>
+        </div>
+      </aside>
+
+      <article id="learning-content" class="learning-content card">
+        <div class="loading-state">Loading your learning journey...</div>
+      </article>
+    </section>
+
+    <section id="about" class="card about">
+      <p class="eyebrow">ABOUT</p>
+      <h2>Why this exists</h2>
+      <p>
+        Engineering Journey keeps daily learning close to the source: Markdown files
+        stored in GitHub. The website is only the presentation layer.
+      </p>
+      <div class="principles">
+        <span>Markdown = Knowledge</span>
+        <span>Manifest = Index</span>
+        <span>JavaScript = Experience</span>
+        <span>GitHub Actions = Automation</span>
+        <span>GitHub Pages = Presentation</span>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <span>Engineering Journey</span>
+      <span>Built with Markdown + GitHub Pages</span>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="js/config/config.js"></script>
+  <script src="js/utils/date-utils.js"></script>
+  <script src="js/services/manifest-service.js"></script>
+  <script src="js/services/learning-service.js"></script>
+  <script src="js/learning/learning-parser.js"></script>
+  <script src="js/learning/learning-renderer.js"></script>
+  <script src="js/ui/date-selector.js"></script>
+  <script src="js/ui/week-selector.js"></script>
+  <script src="js/ui/learning-meta.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

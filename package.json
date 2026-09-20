@@ -1,0 +1,9 @@
+{
+  "name": "engineering-journey",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Engineering Journey learning notes",
+  "scripts": {
+    "build": "node scripts/generate-manifest.js"
+  }
+}

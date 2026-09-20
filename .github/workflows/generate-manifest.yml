@@ -1,0 +1,44 @@
+name: Generate Learning Manifest
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "learning/**/*.md"
+      - "scripts/generate-manifest.js"
+      - ".github/workflows/generate-manifest.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  generate-manifest:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Generate manifest
+        run: npm run build
+
+      - name: Commit manifest
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          if git diff --quiet -- data/manifest.json; then
+            echo "Manifest is already up to date."
+            exit 0
+          fi
+
+          git add data/manifest.json
+          git commit -m "chore: update learning manifest"
+          git push

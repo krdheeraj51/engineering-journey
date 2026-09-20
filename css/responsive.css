@@ -1,0 +1,63 @@
+@media (max-width: 900px) {
+  .content-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    position: static;
+  }
+
+  .entry-list {
+    max-height: 280px;
+  }
+
+  .hero {
+    align-items: start;
+    flex-direction: column;
+  }
+
+  .hero-stat {
+    width: 100%;
+  }
+}
+
+@media (max-width: 640px) {
+  .container {
+    width: min(100% - 20px, 1180px);
+  }
+
+  .header-inner {
+    min-height: 62px;
+  }
+
+  .brand small,
+  .top-nav a:not(.active) {
+    display: none;
+  }
+
+  .page {
+    padding-top: 28px;
+  }
+
+  .toolbar-row {
+    flex-wrap: wrap;
+  }
+
+  .date-field {
+    order: -1;
+    width: 100%;
+  }
+
+  .learning-content {
+    padding: 20px;
+    min-height: 500px;
+  }
+
+  .learning-header {
+    flex-direction: column;
+  }
+
+  .site-footer .container {
+    flex-direction: column;
+  }
+}
