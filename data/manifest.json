@@ -1,7 +1,15 @@
 {
-  "generatedAt": "2026-09-20T03:28:03.908Z",
-  "totalEntries": 1,
+  "generatedAt": "2026-09-20T03:37:17.675Z",
+  "totalEntries": 2,
   "entries": [
+    {
+      "date": "2026-09-21",
+      "title": "Learning — 2026-09-21",
+      "topics": [],
+      "category": "Engineering",
+      "status": "learning",
+      "path": "learning/2026/09/21.md"
+    },
     {
       "date": "2026-09-20",
       "title": "Building My Engineering Journey",
