@@ -1,14 +1,42 @@
 {
-  "generatedAt": "2026-09-20T06:22:44.813Z",
-  "totalEntries": 2,
+  "generatedAt": "2026-09-24T01:20:08.701Z",
+  "totalEntries": 4,
   "entries": [
     {
-      "date": "2026-09-21",
-      "title": "Learning — 2026-09-21",
-      "topics": [],
+      "date": "2026-09-22",
+      "title": "Learning Reflection Agent",
+      "topics": [
+        "LangChain",
+        "Agentic AI",
+        "Documentation"
+      ],
       "category": "Engineering",
-      "status": "planned",
+      "status": "completed",
+      "path": "learning/2026/09/22.md"
+    },
+    {
+      "date": "2026-09-21",
+      "title": "Building My Engineering Journey",
+      "topics": [
+        "Engineering",
+        "GitHub",
+        "Documentation"
+      ],
+      "category": "Engineering",
+      "status": "completed",
       "path": "learning/2026/09/21.md"
+    },
+    {
+      "date": "2026-09-21",
+      "title": "Building My Engineering Journey",
+      "topics": [
+        "Engineering",
+        "GitHub",
+        "Documentation"
+      ],
+      "category": "Engineering",
+      "status": "completed",
+      "path": "learning/2026/09/23.md"
     },
     {
       "date": "2026-09-20",
