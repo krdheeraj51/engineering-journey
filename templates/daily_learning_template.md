@@ -1,62 +1,56 @@
 ---
-date: 2026-09-20
-title: Building My Engineering Journey
-topics: [Engineering, GitHub, Documentation]
+date: YYYY-MM-DD
+title: "Today's Learning Title"
+topics: [Topic1, Topic2, Topic3]
 category: Engineering
-status: completed
+status: in-progress
 ---
 
-# Building My Engineering Journey
+# Today's Learning Title
 
 ## 🎯 Today's Focus
 
-Set up a long-term system for documenting my engineering learning journey.
+<!-- 1-2 sentences outlining today's objective and what you planned to explore -->
+- 
 
 ## 📚 What I Learned
 
-The repository will use **Markdown as the source of truth**.
+<!-- Break down concepts, architecture, mental models, or theory into clear subsections -->
 
-The website will dynamically read daily notes and display them through GitHub Pages.
+### 1. Core Concept / Architecture
+- 
 
-The core architecture is:
+### 2. Deep Dive & How It Works
+- 
 
-- Markdown → knowledge
-- Manifest → index
-- JavaScript → website experience
-- GitHub Actions → automation
-- GitHub Pages → presentation
+```text
+// Optional: Code snippet, command line, schema, or config
+```
 
 ## 💻 What I Built
 
-Created the initial `engineering-journey` repository structure and the first daily learning note.
+<!-- Hands-on work: scripts written, commands tested, mini-projects, or configs adjusted -->
+- 
 
 ## 💡 Key Takeaways
 
-> A learning system should make capturing knowledge easier than managing the system itself.
+<!-- 1-3 high-impact insights or rules of thumb worth remembering months later -->
+> 
 
-The daily workflow should remain simple:
-
-1. Create today's Markdown file.
-2. Write what I learned.
-3. Commit and push.
-4. GitHub Actions updates the manifest.
-5. GitHub Pages displays the entry.
+- 
 
 ## ⚠️ What I Still Need To Learn
 
-- Better Markdown metadata conventions
-- Topic-based revision
-- Monthly learning dashboard
-- Search across all notes
-- Knowledge notes separate from daily notes
+<!-- Open questions, blockers, edge cases, or next topics on your radar -->
+- [ ] 
+- [ ] 
 
 ## 🔗 Resources
 
-- [GitHub Pages](https://pages.github.com/)
-- [Markdown Guide](https://www.markdownguide.org/)
+<!-- Links to official docs, articles, GitHub repos, or video references -->
+- [Resource Title](https://example.com)
 
 ## 🔄 Revision Notes
 
-The most important architectural principle is:
-
-**Keep the content simple and let automation handle the index.**
+<!-- Quick 1-2 sentence flash summary for revising this topic in seconds later -->
+**Summary:** 

@@ -53,38 +53,62 @@ engineering-journey/
 
 ## Daily workflow
 
-Create a new Markdown file:
+Create a new Markdown file automatically using the template:
 
-```text
-learning/2026/09/21.md
+```bash
+npm run new
+# or with title:
+npm run new -- "Today's Topic"
 ```
 
-Use this template:
+Or manually copy [daily_learning_template.md](templates/daily_learning_template.md) to `learning/YYYY/MM/DD.md`:
 
 ```markdown
 ---
-date: 2026-09-21
-title: What I Learned Today
-topics: [Topic A, Topic B]
-category: AI
-status: completed
+date: YYYY-MM-DD
+title: "Today's Learning Title"
+topics: [Topic1, Topic2, Topic3]
+category: Engineering
+status: in-progress
 ---
 
-# What I Learned Today
+# Today's Learning Title
 
 ## 🎯 Today's Focus
 
+<!-- 1-2 sentences outlining today's objective -->
+- 
+
 ## 📚 What I Learned
+
+### 1. Core Concept / Architecture
+- 
+
+### 2. Deep Dive & How It Works
+- 
 
 ## 💻 What I Built
 
+- 
+
 ## 💡 Key Takeaways
+
+> 
+
+- 
 
 ## ⚠️ What I Still Need To Learn
 
+- [ ] 
+- [ ] 
+
 ## 🔗 Resources
 
+- [Resource Title](https://example.com)
+
 ## 🔄 Revision Notes
+
+**Summary:** 
 ```
 
 Then commit and push:

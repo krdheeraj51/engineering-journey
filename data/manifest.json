@@ -1,7 +1,55 @@
 {
-  "generatedAt": "2026-09-24T01:39:29.283Z",
-  "totalEntries": 5,
+  "generatedAt": "2026-10-04T12:15:14.763Z",
+  "totalEntries": 10,
   "entries": [
+    {
+      "date": "2026-10-04",
+      "title": "MCP Architecture & Implementation",
+      "topics": [
+        "MCP",
+        "MCP Architecture",
+        "MCP Server"
+      ],
+      "category": "Engineering",
+      "status": "in-progress",
+      "path": "learning/2026/10/04.md"
+    },
+    {
+      "date": "2026-10-03",
+      "title": "MCP Architecture & Implementation",
+      "topics": [
+        "MCP",
+        "MCP Architecture",
+        "MCP Server"
+      ],
+      "category": "Engineering",
+      "status": "completed",
+      "path": "learning/2026/10/03.md"
+    },
+    {
+      "date": "2026-10-02",
+      "title": "MCP Architecture & Implementation",
+      "topics": [
+        "MCP",
+        "MCP Architecture",
+        "MCP Server"
+      ],
+      "category": "Engineering",
+      "status": "completed",
+      "path": "learning/2026/10/02.md"
+    },
+    {
+      "date": "2026-10-01",
+      "title": "MCP Architecture & Implementation",
+      "topics": [
+        "MCP",
+        "MCP Architecture",
+        "MCP Server"
+      ],
+      "category": "Engineering",
+      "status": "completed",
+      "path": "learning/2026/10/01.md"
+    },
     {
       "date": "2026-09-24",
       "title": "MCP Architecture & Implementation",
@@ -61,6 +109,14 @@
       "category": "Engineering",
       "status": "completed",
       "path": "learning/2026/09/20.md"
+    },
+    {
+      "date": "2026-09-19",
+      "title": "Learning — 2026-09-19",
+      "topics": [],
+      "category": "Engineering",
+      "status": "learning",
+      "path": "learning/2026/09/19.md"
     }
   ]
 }

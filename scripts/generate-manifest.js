@@ -51,10 +51,11 @@ const markdownFiles = walk(ROOT)
 
 const entries = markdownFiles.map(file => {
   const relative = path.relative(process.cwd(), file);
+  const normalizedPath = toPublicPath(relative);
   const content = fs.readFileSync(file, "utf8");
   const meta = parseFrontMatter(content);
 
-  const dateMatch = relative.match(/learning\/(\d{4})\/(\d{2})\/(\d{2})\.md$/);
+  const dateMatch = normalizedPath.match(/learning\/(\d{4})\/(\d{2})\/(\d{2})\.md$/);
 
   if (!dateMatch) {
     throw new Error(`Invalid learning file path: ${relative}`);
@@ -69,7 +70,7 @@ const entries = markdownFiles.map(file => {
     topics: Array.isArray(meta.topics) ? meta.topics : meta.topics ? [meta.topics] : [],
     category: meta.category || "Engineering",
     status: meta.status || "learning",
-    path: toPublicPath(relative)
+    path: normalizedPath
   };
 }).sort((a, b) => b.date.localeCompare(a.date));
 
