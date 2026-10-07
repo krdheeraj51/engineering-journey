@@ -1,14 +1,48 @@
 {
-  "generatedAt": "2026-10-04T12:18:25.348Z",
-  "totalEntries": 10,
+  "generatedAt": "2026-10-07T02:43:32.251Z",
+  "totalEntries": 13,
   "entries": [
     {
-      "date": "2026-10-04",
-      "title": "MCP Architecture & Implementation",
+      "date": "2026-10-07",
+      "title": "Today's Learning Title",
       "topics": [
-        "MCP",
-        "MCP Architecture",
-        "MCP Server"
+        "Topic1",
+        "Topic2",
+        "Topic3"
+      ],
+      "category": "Engineering",
+      "status": "in-progress",
+      "path": "learning/2026/10/07.md"
+    },
+    {
+      "date": "2026-10-06",
+      "title": "Today's Learning Title",
+      "topics": [
+        "Topic1",
+        "Topic2",
+        "Topic3"
+      ],
+      "category": "Engineering",
+      "status": "in-progress",
+      "path": "learning/2026/10/06.md"
+    },
+    {
+      "date": "2026-10-05",
+      "title": "Project Setup for Reflection Agent",
+      "topics": [
+        "LangGraph",
+        "Project Setup"
+      ],
+      "category": "Engineering",
+      "status": "in-progress",
+      "path": "learning/2026/10/05.md"
+    },
+    {
+      "date": "2026-10-04",
+      "title": "Basic of LangGraph",
+      "topics": [
+        "LangGraaph",
+        "Introduction"
       ],
       "category": "Engineering",
       "status": "in-progress",
